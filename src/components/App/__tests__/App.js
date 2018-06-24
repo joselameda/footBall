@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import App from '../App';
-import Table from '../../Table';
-import SearchBar from '../../SearchBar';
+import Table from '../../Table/Containers/tableContainer';
+import SearchBar from '../../SearchBar/Containers/searchBarContainer';
 import Header from '../../Header';
 
 describe('Component App',() => {
@@ -14,8 +14,8 @@ describe('Component App',() => {
     test('should have 3 components (Header,Table,SearchBar)', () => {
       const appComponent = shallow(<App {...mockProps} />);
       expect(appComponent.find(Header).length).toBe(1);
-      // expect(appComponent.find(SearchBar).length).toBe(1);
-      // expect(appComponent.find(Table).length).toBe(1);
+      expect(appComponent.find(SearchBar).length).toBe(1);
+      expect(appComponent.find(Table).length).toBe(1);
     });
   });
   describe('componentDidMount', () => {

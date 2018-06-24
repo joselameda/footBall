@@ -11,9 +11,7 @@ class Table extends PureComponent {
       <div className="columns">
           <div className="column">
               <table className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
-                  <thead>
                   <TableHead />
-                  </thead>
                   <tbody>
                   {rows}
                   </tbody>
